@@ -79,6 +79,17 @@ const SignUpForm = ({
         />
       </div>
 
+      
+      <div className="field-line">
+        <TextField
+          floatingLabelText="Youtube video link(https://youtu.be/A71aqufiNtQ)"
+          name="videoLink"
+          errorText={errors.videoLink}
+          onChange={onChange}
+          value={user.videoLink}
+        />
+      </div>
+
       <div className="button-line">
         <RaisedButton type="submit" label="Create New Account" primary />
       </div>

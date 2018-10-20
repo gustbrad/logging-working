@@ -11,7 +11,8 @@ const UserSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
   instrument: String,
-  experience: String
+  experience: String,
+  videoLink: String
 });
 
 

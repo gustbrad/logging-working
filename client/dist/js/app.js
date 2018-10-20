@@ -15145,6 +15145,17 @@ var SignUpForm = function SignUpForm(_ref) {
       ),
       _react2.default.createElement(
         'div',
+        { className: 'field-line' },
+        _react2.default.createElement(_TextField2.default, {
+          floatingLabelText: 'Youtube video link(https://youtu.be/A71aqufiNtQ)',
+          name: 'videoLink',
+          errorText: errors.videoLink,
+          onChange: onChange,
+          value: user.videoLink
+        })
+      ),
+      _react2.default.createElement(
+        'div',
         { className: 'button-line' },
         _react2.default.createElement(_RaisedButton2.default, { type: 'submit', label: 'Create New Account', primary: true })
       ),
@@ -15564,6 +15575,7 @@ var SignUpPage = function (_React$Component) {
         lastName: '',
         instrument: '',
         experience: '',
+        videoLink: '',
         password: ''
       }
     };
@@ -15595,8 +15607,9 @@ var SignUpPage = function (_React$Component) {
       var instrument = encodeURIComponent(this.state.user.instrument);
       var experience = encodeURIComponent(this.state.user.experience);
       var email = encodeURIComponent(this.state.user.email);
+      var videoLink = encodeURIComponent(this.state.user.videoLink);
       var password = encodeURIComponent(this.state.user.password);
-      var formData = 'firstName=' + firstName + '&lastName=' + lastName + '&instrument=' + instrument + '&experience=' + experience + '&email=' + email + '&password=' + password;
+      var formData = 'firstName=' + firstName + '&lastName=' + lastName + '&instrument=' + instrument + '&experience=' + experience + '&videoLink=' + videoLink + '&email=' + email + '&password=' + password;
       console.log(instrument);
       // create an AJAX request
       var xhr = new XMLHttpRequest();

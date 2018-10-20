@@ -48,6 +48,11 @@ function validateSignupForm(payload) {
     errors.experience = 'Please provide an experience.';
   }
 
+  if (!payload) {
+    isFormValid = false;
+    errors.videoLink = 'Please provide you youtube video link.';
+  }
+
   if (!isFormValid) {
     message = 'Check the form for errors.';
   }

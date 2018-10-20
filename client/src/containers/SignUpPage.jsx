@@ -20,6 +20,7 @@ class SignUpPage extends React.Component {
         lastName: '',
         instrument: '',
         experience: '',
+        videoLink: '',
         password: ''
       }
     };
@@ -46,8 +47,9 @@ class SignUpPage extends React.Component {
     const instrument = encodeURIComponent(this.state.user.instrument);
     const experience = encodeURIComponent(this.state.user.experience);
     const email = encodeURIComponent(this.state.user.email);
+    const videoLink = encodeURIComponent(this.state.user.videoLink);
     const password = encodeURIComponent(this.state.user.password);
-    const formData = `firstName=${firstName}&lastName=${lastName}&instrument=${instrument}&experience=${experience}&email=${email}&password=${password}`;
+    const formData = `firstName=${firstName}&lastName=${lastName}&instrument=${instrument}&experience=${experience}&videoLink=${videoLink}&email=${email}&password=${password}`;
 console.log(instrument)
     // create an AJAX request
     const xhr = new XMLHttpRequest();
