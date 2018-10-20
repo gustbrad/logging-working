@@ -17,6 +17,8 @@ import HomePage from './components/HomePage.jsx';
 import LoginPage from './containers/LoginPage.jsx';
 import LogoutFunction from './containers/LogoutFunction.jsx';
 import SignUpPage from './containers/SignUpPage.jsx';
+import SignUpPageMusician from './containers/SignUpPageMusician.jsx';
+import SignUpPageBand from './containers/SignUpPageBand.jsx';
 import DashboardPage from './containers/DashboardPage.jsx';
 import Auth from './modules/Auth';
 
@@ -91,6 +93,8 @@ class Main extends Component {
                 <div className="top-bar-right">
                   <Link to="/login">Log in</Link>
                   <Link to="/signup">Sign up</Link>
+                  <Link to="/signupmusician">Sign up Musician</Link>
+                  <Link to="/signupband">Sign up Band</Link>
                 </div>
               )}
 
@@ -100,6 +104,8 @@ class Main extends Component {
             <PrivateRoute path="/dashboard" component={DashboardPage}/>
             <LoggedOutRoute path="/login" component={LoginPage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
             <LoggedOutRoute path="/signup" component={SignUpPage}/>
+            <LoggedOutRoute path="/signupmusician" component={SignUpPageMusician}/>
+            <LoggedOutRoute path="/signupband" component={SignUpPageBand}/>
             <Route path="/logout" component={LogoutFunction}/>
           </div>
 
