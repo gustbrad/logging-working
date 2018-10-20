@@ -41,7 +41,6 @@ class SignUpPage extends React.Component {
     event.preventDefault();
 
     // create a string for an HTTP body message
-    const name = encodeURIComponent(this.state.user.name);
     const firstName = encodeURIComponent(this.state.user.firstName);
     const lastName = encodeURIComponent(this.state.user.lastName);
     const instrument = encodeURIComponent(this.state.user.instrument);
