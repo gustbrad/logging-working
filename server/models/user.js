@@ -12,7 +12,10 @@ const UserSchema = new mongoose.Schema({
   lastName: String,
   instrument: String,
   experience: String,
-  videoLink: String
+  videoLink: String,
+  bandName: String,
+  bandDescription: String,
+  musicGenre: String
 });
 
 
