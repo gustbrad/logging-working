@@ -18,6 +18,8 @@ const SignUpFormBand = ({
 
       {errors.summary && <p className="error-message">{errors.summary}</p>}
 
+      
+
       <div className="field-line">
         <TextField
           floatingLabelText="Band Name"

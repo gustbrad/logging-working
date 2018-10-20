@@ -16092,7 +16092,8 @@ var SignUpPageBand = function (_React$Component) {
         experience: '',
         videoLink: '',
         bandDescription: '',
-        password: ''
+        password: '',
+        isMusician: false
       }
     };
 

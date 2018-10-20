@@ -22,7 +22,8 @@ class SignUpPageBand extends React.Component {
         experience: '',
         videoLink: '',
         bandDescription: '',
-        password: ''
+        password: '',
+        isMusician: false,
       }
     };
 

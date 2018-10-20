@@ -21,7 +21,8 @@ class SignUpPageMusician extends React.Component {
         instrument: '',
         experience: '',
         videoLink: '',
-        password: ''
+        password: '',
+        isMusician: true,
       }
     };
 
