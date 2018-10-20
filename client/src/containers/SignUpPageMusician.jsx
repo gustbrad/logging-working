@@ -23,6 +23,8 @@ class SignUpPageMusician extends React.Component {
         videoLink: '',
         password: '',
         isMusician: true,
+        city: '',
+        state: ''
       }
     };
 
@@ -49,7 +51,10 @@ class SignUpPageMusician extends React.Component {
     const email = encodeURIComponent(this.state.user.email);
     const videoLink = encodeURIComponent(this.state.user.videoLink);
     const password = encodeURIComponent(this.state.user.password);
-    const formData = `firstName=${firstName}&lastName=${lastName}&instrument=${instrument}&experience=${experience}&videoLink=${videoLink}&email=${email}&password=${password}`;
+    const city = encodeURIComponent(this.state.user.city);
+    const state = encodeURIComponent(this.state.user.state);
+    const isMusician = encodeURIComponent(this.state.user.isMusician);
+    const formData = `firstName=${firstName}&lastName=${lastName}&instrument=${instrument}&city=${city}&state=${state}&isMusician=${isMusician}&experience=${experience}&videoLink=${videoLink}&email=${email}&password=${password}`;
 console.log(instrument)
     // create an AJAX request
     const xhr = new XMLHttpRequest();

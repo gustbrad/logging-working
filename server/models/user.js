@@ -15,7 +15,10 @@ const UserSchema = new mongoose.Schema({
   videoLink: String,
   bandName: String,
   bandDescription: String,
-  musicGenre: String
+  musicGenre: String,
+  isMusician: Boolean,
+  city: String,
+  state: String
 });
 
 

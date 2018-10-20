@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import { Card, CardText } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
+import DropdownList from "./Form/DropdownList";
+import city_names from "./Arrays/Cities";
+import state_names from "./Arrays/States";
 
 
 const SignUpFormBand = ({
@@ -39,6 +42,23 @@ const SignUpFormBand = ({
           value={user.musicGenre}
         />
       </div>
+
+      	<div className="form-group col-md-2">
+							<label htmlFor="location">City: </label><br></br>
+							<DropdownList data={city_names} id="city-names"
+              name="city"
+              onChange={onChange}
+              value={user.city}
+              
+              />
+						</div>
+						<div className="form-group col-md-2">
+							<label htmlFor="location">State	: </label><br></br>
+							<DropdownList data={state_names} id="state-names"
+              value={user.state}
+              />
+				</div>
+
 
       <div className="field-line">
         <TextField
