@@ -15113,6 +15113,17 @@ var SignUpForm = function SignUpForm(_ref) {
         'div',
         { className: 'field-line' },
         _react2.default.createElement(_TextField2.default, {
+          floatingLabelText: 'Experience',
+          name: 'experience',
+          errorText: errors.experience,
+          onChange: onChange,
+          value: user.experience
+        })
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'field-line' },
+        _react2.default.createElement(_TextField2.default, {
           floatingLabelText: 'Email',
           name: 'email',
           errorText: errors.email,
@@ -15552,6 +15563,7 @@ var SignUpPage = function (_React$Component) {
         firstName: '',
         lastName: '',
         instrument: '',
+        experience: '',
         password: ''
       }
     };
@@ -15581,9 +15593,10 @@ var SignUpPage = function (_React$Component) {
       var firstName = encodeURIComponent(this.state.user.firstName);
       var lastName = encodeURIComponent(this.state.user.lastName);
       var instrument = encodeURIComponent(this.state.user.instrument);
+      var experience = encodeURIComponent(this.state.user.experience);
       var email = encodeURIComponent(this.state.user.email);
       var password = encodeURIComponent(this.state.user.password);
-      var formData = 'firstName=' + firstName + '&lastName=' + lastName + '&instrument=' + instrument + '&email=' + email + '&password=' + password;
+      var formData = 'firstName=' + firstName + '&lastName=' + lastName + '&instrument=' + instrument + '&experience=' + experience + '&email=' + email + '&password=' + password;
       console.log(instrument);
       // create an AJAX request
       var xhr = new XMLHttpRequest();

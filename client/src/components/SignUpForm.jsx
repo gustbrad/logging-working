@@ -38,13 +38,23 @@ const SignUpForm = ({
         />
       </div>
 
-        <div className="field-line">
+      <div className="field-line">
         <TextField
           floatingLabelText="Instrument"
           name="instrument"
           errorText={errors.instrument}
           onChange={onChange}
           value={user.instrument}
+        />
+      </div>
+
+      <div className="field-line">
+        <TextField
+          floatingLabelText="Experience"
+          name="experience"
+          errorText={errors.experience}
+          onChange={onChange}
+          value={user.experience}
         />
       </div>
 

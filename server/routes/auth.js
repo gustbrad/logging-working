@@ -43,6 +43,11 @@ function validateSignupForm(payload) {
     errors.instrument = 'Please provide an instrument.';
   }
 
+  if (!payload) {
+    isFormValid = false;
+    errors.experience = 'Please provide an experience.';
+  }
+
   if (!isFormValid) {
     message = 'Check the form for errors.';
   }
