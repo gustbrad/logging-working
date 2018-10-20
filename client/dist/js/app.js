@@ -15260,29 +15260,29 @@ var SignUpFormBand = function SignUpFormBand(_ref) {
         'div',
         { className: 'field-line' },
         _react2.default.createElement(_TextField2.default, {
-          floatingLabelText: 'First Name',
-          name: 'firstName',
-          errorText: errors.firstName,
+          floatingLabelText: 'Band Name',
+          name: 'bandName',
+          errorText: errors.bandName,
           onChange: onChange,
-          value: user.firstName
+          value: user.bandName
         })
       ),
       _react2.default.createElement(
         'div',
         { className: 'field-line' },
         _react2.default.createElement(_TextField2.default, {
-          floatingLabelText: 'Last Name',
-          name: 'lastName',
-          errorText: errors.lastName,
+          floatingLabelText: 'Music Genre',
+          name: 'musicGenre',
+          errorText: errors.musicGenre,
           onChange: onChange,
-          value: user.lastName
+          value: user.musicGenre
         })
       ),
       _react2.default.createElement(
         'div',
         { className: 'field-line' },
         _react2.default.createElement(_TextField2.default, {
-          floatingLabelText: 'Instrument',
+          floatingLabelText: 'Instrument Needed',
           name: 'instrument',
           errorText: errors.instrument,
           onChange: onChange,
@@ -15332,6 +15332,17 @@ var SignUpFormBand = function SignUpFormBand(_ref) {
           errorText: errors.videoLink,
           onChange: onChange,
           value: user.videoLink
+        })
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'field-line' },
+        _react2.default.createElement(_TextField2.default, {
+          floatingLabelText: 'Band Description',
+          name: 'bandDescription',
+          errorText: errors.bandDescription,
+          onChange: onChange,
+          value: user.bandDescription
         })
       ),
       _react2.default.createElement(
@@ -16075,11 +16086,12 @@ var SignUpPageBand = function (_React$Component) {
       errors: {},
       user: {
         email: '',
-        firstName: '',
-        lastName: '',
+        bandName: '',
+        musicGenre: '',
         instrument: '',
         experience: '',
         videoLink: '',
+        bandDescription: '',
         password: ''
       }
     };
@@ -16105,14 +16117,15 @@ var SignUpPageBand = function (_React$Component) {
       event.preventDefault();
 
       // create a string for an HTTP body message
-      var firstName = encodeURIComponent(this.state.user.firstName);
-      var lastName = encodeURIComponent(this.state.user.lastName);
+      var bandName = encodeURIComponent(this.state.user.bandName);
+      var bandDescription = encodeURIComponent(this.state.user.bandDescription);
       var instrument = encodeURIComponent(this.state.user.instrument);
+      var musicGenre = encodeURIComponent(this.state.user.musicGenre);
       var experience = encodeURIComponent(this.state.user.experience);
       var email = encodeURIComponent(this.state.user.email);
       var videoLink = encodeURIComponent(this.state.user.videoLink);
       var password = encodeURIComponent(this.state.user.password);
-      var formData = 'firstName=' + firstName + '&lastName=' + lastName + '&instrument=' + instrument + '&experience=' + experience + '&videoLink=' + videoLink + '&email=' + email + '&password=' + password;
+      var formData = 'bandName=' + bandName + '&bandDescription=' + bandDescription + '&musicGenre=' + musicGenre + '&instrument=' + instrument + '&experience=' + experience + '&videoLink=' + videoLink + '&email=' + email + '&password=' + password;
       console.log(instrument);
       // create an AJAX request
       var xhr = new XMLHttpRequest();

@@ -20,27 +20,27 @@ const SignUpFormBand = ({
 
       <div className="field-line">
         <TextField
-          floatingLabelText="First Name"
-          name="firstName"
-          errorText={errors.firstName}
+          floatingLabelText="Band Name"
+          name="bandName"
+          errorText={errors.bandName}
           onChange={onChange}
-          value={user.firstName}
+          value={user.bandName}
         />
       </div>
 
       <div className="field-line">
         <TextField
-          floatingLabelText="Last Name"
-          name="lastName"
-          errorText={errors.lastName}
+          floatingLabelText="Music Genre"
+          name="musicGenre"
+          errorText={errors.musicGenre}
           onChange={onChange}
-          value={user.lastName}
+          value={user.musicGenre}
         />
       </div>
 
       <div className="field-line">
         <TextField
-          floatingLabelText="Instrument"
+          floatingLabelText="Instrument Needed"
           name="instrument"
           errorText={errors.instrument}
           onChange={onChange}
@@ -87,6 +87,16 @@ const SignUpFormBand = ({
           errorText={errors.videoLink}
           onChange={onChange}
           value={user.videoLink}
+        />
+      </div>
+
+      <div className="field-line">
+        <TextField
+          floatingLabelText="Band Description"
+          name="bandDescription"
+          errorText={errors.bandDescription}
+          onChange={onChange}
+          value={user.bandDescription}
         />
       </div>
 
